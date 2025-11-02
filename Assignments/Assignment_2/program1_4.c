@@ -1,0 +1,57 @@
+/////////////////////////////////////////////////////////////////////////////
+//
+//  Required Header File
+//  
+/////////////////////////////////////////////////////////////////////////////
+#include<stdio.h>
+/////////////////////////////////////////////////////////////////////////////
+//  Function name:  Display 
+//  Description:    It displays first input in second inputs number of times 
+//  Input:          int,int
+//  Author:         Atharva Sanjay Dhumal.
+//  Date:           27/10/2025
+//
+/////////////////////////////////////////////////////////////////////////////
+void Display(int iNo, int iFrequency)
+{
+    int icnt = 0;
+
+    if(iFrequency<0)
+    {
+        iFrequency=-iFrequency;
+    }
+
+    for(icnt = 1; icnt <= iFrequency; icnt++)
+    {
+        printf("%d\t",iNo);
+    }
+     
+}
+/////////////////////////////////////////////////////////////////////////////
+//  
+//  Entry Point Function for the application
+//
+/////////////////////////////////////////////////////////////////////////////
+
+int main()
+{
+    int iValue = 0;
+    int iCount = 0;
+
+    printf("Enter number");
+    scanf("%d",&iValue);
+
+    
+    printf("Enter frequency");
+    scanf("%d",&iCount);
+
+    Display(iValue,iCount);
+
+    return 0;
+}
+/////////////////////////////////////////////////////////////////////////////
+//
+// Testcases Succesfully handled by the application
+//  Input: 12      Input2 : 5     output:12 12 12 12 12
+//  Input: -2      Input2 : 3     output:-2 -2 -2
+/////////////////////////////////////////////////////////////////////////////
