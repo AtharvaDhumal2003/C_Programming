@@ -14,7 +14,7 @@ void Pattern(int iRow,int iCol)
             }
             else
             {
-                printf(" \t");
+                printf("#\t");
             }
             printf("\n");
         }
@@ -37,5 +37,6 @@ int main()
 
     return 0;
 }
+
 
 
