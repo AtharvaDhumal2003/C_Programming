@@ -8,7 +8,7 @@ void Pattern(int iRow,int iCol)
     {
         for(j = 1; j <= iCol;j++)
         {
-            if(i+j == 5)
+            if(i+j <= 5)
             {
                 printf("*\t");
             }
@@ -37,4 +37,5 @@ int main()
 
     return 0;
 }
+
 
