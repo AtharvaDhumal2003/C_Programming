@@ -20,10 +20,10 @@ void DisplayASCII()
     for(ch = '\0'; ch <' ÿ'; ch++)
     {
 
-        printf("|%c|\n",ch);
-        printf("|%d|\n",ch);
-        printf("|%#X|\n",ch);
-        printf("|%o|\n",ch);
+        printf("Symbol:|%c|\n",ch);
+        printf("Decimal:|%d|\n",ch);
+        printf("Hexadecimal:|%#X|\n",ch);
+        printf("Octal:|%o|\n",ch);
     }
 }
 /////////////////////////////////////////////////////////////////////////////
@@ -48,3 +48,4 @@ int main()
 //|Symbol:C|      |Decimal:67|    |Hexadecimal:0X43|      |Octal:103      |
 //
 ////////////////////////////////////////////////////////////////////////////////////
+
