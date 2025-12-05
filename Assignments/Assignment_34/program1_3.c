@@ -18,16 +18,16 @@ void Display(char ch)
 {
     char ch1 = '\0';
 
-    if(ch >= 'a' && ch <= 'z')
+    if(ch >= 'A' && ch <= 'Z')
     {
-        for(ch1 = ch; ch1 <= 'z';++ch1)
+        for(ch1 = ch; ch1 <= 'Z';++ch1)
         {
             printf("%c",ch1);
         }
     }
-    else if(ch >= 'A' && ch <= 'Z')
+    else if(ch >= 'a' && ch <= 'z')
     {
-        for(ch1 = ch; ch1 >= 'A';--ch1)
+        for(ch1 = ch; ch1 >= 'a';--ch1)
         {
             printf("%c",ch1);
         }
@@ -58,14 +58,15 @@ int main()
 ////////////////////////////////////////////////////////////////////////////////////
 //
 //Enter the character :
-//H
-//HGFEDCBA
+//x
+//xyz
 //
 //Enter the character :
-//n
-//nopqrstuvwxyz
+//d
+//dcba
 //
 //Enter the character :
 //8
 //
+
 ////////////////////////////////////////////////////////////////////////////////////
