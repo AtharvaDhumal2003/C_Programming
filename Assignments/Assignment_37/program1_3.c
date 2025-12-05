@@ -1,0 +1,64 @@
+/////////////////////////////////////////////////////////////////////////////
+//
+//  Required Header File
+//  
+/////////////////////////////////////////////////////////////////////////////
+#include<stdio.h>
+
+/////////////////////////////////////////////////////////////////////////////
+//  Function name:  CountChar
+//  Description:    It use count the frquency of given chracter in the string.
+//  Input:          char
+//  Output:         int
+//  Author:         Atharva Sanjay Dhumal.
+//  Date:           03/12/2025
+//
+/////////////////////////////////////////////////////////////////////////////
+
+int CountChar(char str[],char ch)
+{
+    int iCount = -1;
+
+    while(*str != '\0')
+    {
+        if(*str == ch)
+        {
+          iCount++;
+          break;
+        }
+        str++;
+    }
+
+
+    return iCount;
+
+}
+/////////////////////////////////////////////////////////////////////////////
+//  
+//  Entry Point Function for the application
+//
+/////////////////////////////////////////////////////////////////////////////
+
+int main()
+{
+    char Arr[50] = {'\0'};
+    char cValue = '\0';
+    int iRet = 0;
+
+    printf("Enter String :\n");
+    scanf("%[^'\n']s",Arr);
+
+    printf("Enter the character:");
+    scanf(" %c",&cValue);
+
+    iRet = CountChar(Arr,cValue);
+
+   printf("chracter found at index :%d",iRet);
+}
+////////////////////////////////////////////////////////////////////////////////////
+//
+//Enter String :
+//MArvellous
+//Enter the character:M
+//chracter found at index :0
+////////////////////////////////////////////////////////////////////////////////////
