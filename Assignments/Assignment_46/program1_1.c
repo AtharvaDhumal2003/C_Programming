@@ -1,0 +1,122 @@
+/////////////////////////////////////////////////////////////////////////////
+//
+//  Required Header File
+//  
+/////////////////////////////////////////////////////////////////////////////
+#include<stdio.h>
+#include<stdlib.h>
+
+#define TRUE 1
+#define FALSE 0
+
+struct node
+{
+    int data;
+    struct node *next;
+};
+
+typedef struct node NODE;
+typedef struct node * PNODE;
+typedef struct node ** PPNODE;
+
+/////////////////////////////////////////////////////////////////////////////
+//  Function name:  InsertFirst
+//  Description:    It use to insert the element at  first position in 
+//                  the linkedlist.
+//  Input:          pointer,int
+//  Author:         Atharva Sanjay Dhumal.
+//  Date:           31/12/2025
+//
+/////////////////////////////////////////////////////////////////////////////
+
+void InsertFirst(PPNODE Head,int no)
+{
+    PNODE newn = NULL;
+
+    newn = (PNODE)malloc(sizeof(NODE));
+
+    newn -> data = no;
+    newn -> next = NULL;
+
+    if(*Head == NULL)   
+    {
+        *Head = newn;
+    }
+    else               
+    {
+        newn -> next = *Head;
+        *Head = newn; 
+    }
+}
+/////////////////////////////////////////////////////////////////////////////
+//  Function name:  Display
+//  Description:    It use to Display elements in the linkedlist.
+//  Input:          pointer
+//  Author:         Atharva Sanjay Dhumal.
+//  Date:           31/12/2025
+//
+/////////////////////////////////////////////////////////////////////////////
+
+void Display(PNODE Head)
+{
+    while(Head != NULL)
+    {
+        printf("|%d|->",Head->data);
+        Head = Head -> next;
+    }
+    printf("NULL\n");
+}
+
+/////////////////////////////////////////////////////////////////////////////
+//  Function name:  DisplayGreater
+//  Description:    It use to display greater elements tham given number.
+//  Input:          pointer,int
+//  Author:         Atharva Sanjay Dhumal.
+//  Date:           31/12/2025
+//
+/////////////////////////////////////////////////////////////////////////////
+
+void DisplayGreater(PNODE Head,int no)
+{
+    int iCount = 0;
+
+    while(Head != NULL)
+    {
+        if((Head -> data) > no)
+        {
+            printf("%d\t",Head -> data);
+        }
+        Head = Head -> next;
+    }
+}
+/////////////////////////////////////////////////////////////////////////////
+//  
+//  Entry Point Function for the application
+//
+/////////////////////////////////////////////////////////////////////////////
+int main()
+{
+    PNODE First = NULL;
+    int iValue = 0;
+
+    InsertFirst(&First,101);
+    InsertFirst(&First,60);
+    InsertFirst(&First,51);
+    InsertFirst(&First,40);
+    InsertFirst(&First,21);
+    InsertFirst(&First,20);
+    InsertFirst(&First,11);
+
+    printf("Enter the number:\n");
+    scanf("%d",&iValue);
+
+    DisplayGreater(First,iValue);
+
+    return 0;
+}
+////////////////////////////////////////////////////////////////////////////////////
+//Enter the number:
+//21
+//40      51      60      101
+////////////////////////////////////////////////////////////////////////////////////
+
